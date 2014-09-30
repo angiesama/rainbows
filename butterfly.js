@@ -1,6 +1,6 @@
 butterfly_add = function() {
-	var butterfly_url = 'http://lollify.webs.com/';
-	var file = 'lolly_';
+	var butterfly_url = 'https://angiesama.github.com/rainbows/';
+	var file = 'butterfly_';
 	var count = 7;
 	if (Math.random() > .7) {
 	}
@@ -20,7 +20,7 @@ butterfly_add = function() {
 	div.style.top = height;
 	div.style.left = Math.random()*90 + '%';
 	var img = document.createElement('img');
-	img.setAttribute('src',lollify_url+'lolly/'+file);
+	img.setAttribute('src',butterfly_url+'butterfly/'+file);
 	var body = document.getElementsByTagName('body')[0];
 	body.appendChild(div);
 	div.appendChild(img);
