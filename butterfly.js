@@ -13,7 +13,7 @@ butterfly_add = function(){
 	var m = document.createElement('img');
 	m.onclick=butterfly_add;
 	m.style.cursor='pointer';
-	m.src='http://angiesama.imgur.com/all/'+i+'.gif';
+	m.src='http://imgur.com/a/LgMUQ#_'+i+'.png';
 	var body = document.getElementsByTagName('body')[0];
 	body.appendChild(d);
 	d.appendChild(m);
