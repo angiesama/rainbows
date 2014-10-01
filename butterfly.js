@@ -1,26 +1,23 @@
-butterfly_add = function() {
-	var butterfly_url = 'https://angiesama.github.com/rainbows/';
-	var file = 'butterfly_';
-	var count = 7;
-	if (Math.random() > .7) {
-	}
-	file += Math.ceil(Math.random()*count) + '.gif';
-	var div = document.createElement('div');
-	div.style.position = 'fixed';
-	
-	var height = Math.random()*.9;
-	if (typeof(window.innerHeight) == 'number') {
-		height = height*window.innerHeight+'px';
-	} else if(document.documentElement && document.documentElement.clientHeight) {
-		height = height*document.documentElement.clientHeight+'px';
-	} else {
-		height = height*100+'%'; 
-	}
-	
-	div.style.top = height;
-	div.style.left = Math.random()*90 + '%';
-	var img = document.createElement('img');
-	img.setAttribute('src',butterfly_url+'butterfly/'+file);
+butterfly_add = function(){
+	var s = [[222,123],[387,220],[303,136],[250,186]];
+	var i = Math.ceil(Math.random()*s.length);
+	var a = typeof(window.innerHeight) == 'number';
+	var b = document.documentElement && document.documentElement.clientHeight;
+	var h = a ? window.innerHeight : b ? document.documentElement.clientHeight : document.body.clientHeight;
+	var w = a ? window.innerWidth  : b ? document.documentElement.clientWidth  : document.body.clientWidth;
+	var d = document.createElement('div');
+	d.style.position = 'fixed';
+	d.style.left = (Math.random()*(w-s[i-1][0]))+'px';
+	d.style.top  = (Math.random()*(h-s[i-1][1]))+'px';
+	d.style.zIndex = 10;
+	var m = document.createElement('img');
+	m.onclick=sharkify_add;
+	m.style.cursor='pointer';
+	m.src='http://pile.randimg.net/0/131/32893/butterfly_'+i+'.png';
 	var body = document.getElementsByTagName('body')[0];
-	body.appendChild(div);
-	div.appendChild(img);
+	body.appendChild(d);
+	d.appendChild(m);
+}
+
+
+
