@@ -19,7 +19,7 @@ butterfly_add = function() {
 	div.style.top = height;
 	div.style.left = Math.random()*90 + '%';
 	var img = document.createElement('img');
-	img.setAttribute('src',butterfly_url+'butterfly/');
+	img.setAttribute('src',butterfly_url);
 	var body = document.getElementsByTagName('body')[0];
 	body.appendChild(div);
 	div.appendChild(img);
