@@ -13,7 +13,7 @@ butterfly_add = function(){
 	var m = document.createElement('img');
 	m.onclick=butterfly_add;
 	m.style.cursor='pointer';
-	m.src='http://pile.randimg.net/0/131/32893/butterflyz'+i+'.png';
+	m.src='http://pile.randimg.net/0/131/32893/butterflyz_'+i+'.png';
 	var body = document.getElementsByTagName('body')[0];
 	body.appendChild(d);
 	d.appendChild(m);
